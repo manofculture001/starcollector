@@ -1,0 +1,217 @@
+[gd_scene load_steps=15 format=3 uid="uid://bbj567lqrjbur"]
+
+[ext_resource type="Texture2D" uid="uid://b3at5a0vf0hqs" path="res://sky.jpg" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://dfb4mcnwwia03" path="res://main.gd" id="1_wkp8b"]
+[ext_resource type="Script" uid="uid://be53qlnorv3bf" path="res://player.gd" id="2_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://dnooyw80afme3" path="res://player.jpg" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://dp0taxsbn0xxe" path="res://star.jpeg" id="4_cm0pq"]
+[ext_resource type="Script" uid="uid://fee30colfxgl" path="res://stars.gd" id="4_fos0i"]
+[ext_resource type="Texture2D" uid="uid://ccjeugjb1slg" path="res://shooting star.jpg" id="6_lgr22"]
+[ext_resource type="Script" uid="uid://c7714onuixjc3" path="res://sprite_2d.gd" id="7_trn2v"]
+[ext_resource type="Script" uid="uid://ro5xv82nuxqw" path="res://super_star.gd" id="8_03owx"]
+[ext_resource type="Texture2D" uid="uid://c26rl5mu8xis0" path="res://sstar.jpeg" id="9_wkp8b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cm0pq"]
+radius = 28.8617
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fos0i"]
+radius = 13.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03owx"]
+size = Vector2(78, 101.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20pc6"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_wkp8b")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(642.5, 356.75)
+scale = Vector2(1.06917, 0.897004)
+texture = ExtResource("1_uu6xs")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2"]
+position = Vector2(643, 363)
+scale = Vector2(1.06917, 0.897004)
+texture = ExtResource("1_uu6xs")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_cm0pq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(673, 623)
+scale = Vector2(0.0925, 0.0416667)
+texture = ExtResource("2_r0du0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(673, 624)
+shape = SubResource("CircleShape2D_cm0pq")
+
+[node name="Stars" type="Node2D" parent="."]
+script = ExtResource("4_fos0i")
+
+[node name="star1" type="Sprite2D" parent="Stars"]
+position = Vector2(33, 100.125)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star2" type="Sprite2D" parent="Stars"]
+position = Vector2(56, 386)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star3" type="Sprite2D" parent="Stars"]
+position = Vector2(688, 698)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star4" type="Sprite2D" parent="Stars"]
+position = Vector2(975, 491)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star5" type="Sprite2D" parent="Stars"]
+position = Vector2(263, 156)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star6" type="Sprite2D" parent="Stars"]
+position = Vector2(1254, 628)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star7" type="Sprite2D" parent="Stars"]
+position = Vector2(40, 699)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star8" type="Sprite2D" parent="Stars"]
+position = Vector2(516, 24)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star9" type="Sprite2D" parent="Stars"]
+position = Vector2(866, 187)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="star10" type="Sprite2D" parent="Stars"]
+position = Vector2(1187, 124)
+scale = Vector2(0.103093, 0.0685328)
+texture = ExtResource("4_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stars"]
+position = Vector2(60, 385)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stars"]
+position = Vector2(518, 28)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stars"]
+position = Vector2(1253, 628)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stars"]
+position = Vector2(1189, 123)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Stars"]
+position = Vector2(978, 493)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stars"]
+position = Vector2(869, 187)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Stars"]
+position = Vector2(261, 160)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Stars"]
+position = Vector2(32, 102)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Stars"]
+position = Vector2(691, 699)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Stars"]
+position = Vector2(41, 701)
+shape = SubResource("CircleShape2D_fos0i")
+
+[node name="Shooting Stars" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Shooting Stars"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Shooting Stars/Area2D"]
+position = Vector2(99, 81)
+scale = Vector2(0.0811156, 0.149088)
+texture = ExtResource("6_lgr22")
+script = ExtResource("7_trn2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooting Stars/Area2D"]
+position = Vector2(100, 84.25)
+shape = SubResource("RectangleShape2D_03owx")
+
+[node name="Area2D3" type="Area2D" parent="Shooting Stars"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Shooting Stars/Area2D3"]
+position = Vector2(113, 535)
+scale = Vector2(0.0811156, 0.149088)
+texture = ExtResource("6_lgr22")
+script = ExtResource("7_trn2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooting Stars/Area2D3"]
+position = Vector2(111, 534)
+shape = SubResource("RectangleShape2D_03owx")
+
+[node name="Area2D2" type="Area2D" parent="Shooting Stars"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Shooting Stars/Area2D2"]
+position = Vector2(381, 429)
+scale = Vector2(0.0811156, 0.149088)
+texture = ExtResource("6_lgr22")
+script = ExtResource("7_trn2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shooting Stars/Area2D2"]
+position = Vector2(379, 428)
+shape = SubResource("RectangleShape2D_03owx")
+
+[node name="Super Star" type="Area2D" parent="."]
+script = ExtResource("8_03owx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Super Star"]
+position = Vector2(1117, 21)
+scale = Vector2(0.0733333, 0.10119)
+texture = ExtResource("9_wkp8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Super Star"]
+position = Vector2(1119, 23)
+shape = SubResource("CircleShape2D_20pc6")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Timerlabel" type="Label" parent="UI"]
+offset_left = 567.0
+offset_top = 19.0
+offset_right = 704.0
+offset_bottom = 54.0
+text = "TIME:"
+
+[node name="StarsCollectedLabel" type="Label" parent="UI"]
+offset_left = 161.0
+offset_top = 23.0
+offset_right = 283.0
+offset_bottom = 46.0
+text = "Stars Collected:"
+
+[node name="MessageLabel" type="Label" parent="UI"]
+offset_left = 981.0
+offset_top = 209.0
+offset_right = 1274.0
+offset_bottom = 418.0
